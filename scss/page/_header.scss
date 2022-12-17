@@ -1,0 +1,27 @@
+.navbar__num1, .navbar__num2{
+    padding: 1rem 2rem;
+}
+
+.navbar__num1{
+    background-color: #F6F6F6;
+    padding: 0 2rem;
+    ul{
+        .links{
+            color: #6B6A75;
+            position: relative;
+            font-family: "Source Sans Pro";
+        }
+        li{
+            padding: 1rem .6rem;
+            min-width: 80px;
+            text-align: center;
+        }
+        li:not(li:last-child){
+            border-right: 1px solid #6B6A75;
+        }
+    }
+}
+
+.navbar__num2{
+    @include red-base(background-color);
+}

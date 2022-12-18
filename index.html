@@ -4,98 +4,153 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
     <title>consult</title>
   </head>
   <body>
     <div class="project__container">
       <header class="container-fluid">
-        <!-- <div class="row row-cols-2 justify-content-between aling-items-center d-none d-xl-flex">
-                <nav class="col-7 navbar__num1">
-                    <ul class="list-unstyled d-flex">
-                        <li class="links__container"><span class="links__bg"></span><a href="#" class="links text-decoration-none text-capitalize">FAQs</a></li>
-                        <li class="links__container"><span class="links__bg"></span><a href="#" class="links text-decoration-none text-capitalize">support</a></li>
-                        <li class="links__container"><span class="links__bg"></span><a href="#" class="links text-decoration-none text-capitalize">privacy</a></li>
-                        <li class="links__container"><span class="links__bg"></span><a href="#" class="links text-decoration-none text-capitalize">policy</a></li>
-                        <li class="links__container"><span class="links__bg"></span><a href="#" class="links text-decoration-none text-capitalize">career</a></li>
-                    </ul>
-                </nav>
-                <nav class="col-5 navbar__num2">
-                    <ul class="list-unstyled d-flex">
-                        <li class="w-50 text-white text-decoration-none email__address">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
-                            </svg>
-                            mail@domain.com
-                        </li>
-                        <li class="w-50 text-white text-decoration-none phone__number">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                            </svg>
-                            +000 000 0000
-                        </li>
-                    </ul>
-                </nav>
-            </div> -->
+        <div
+          class="row row-cols-2 justify-content-between aling-items-center d-none d-xl-flex"
+        >
+          <nav class="col-7 navbar__num1">
+            <ul class="list-unstyled d-flex">
+              <li class="links__container">
+                <span class="links__bg"></span
+                ><a href="#" class="links text-decoration-none text-capitalize"
+                  >FAQs</a
+                >
+              </li>
+              <li class="links__container">
+                <span class="links__bg"></span
+                ><a href="#" class="links text-decoration-none text-capitalize"
+                  >support</a
+                >
+              </li>
+              <li class="links__container">
+                <span class="links__bg"></span
+                ><a href="#" class="links text-decoration-none text-capitalize"
+                  >privacy</a
+                >
+              </li>
+              <li class="links__container">
+                <span class="links__bg"></span
+                ><a href="#" class="links text-decoration-none text-capitalize"
+                  >policy</a
+                >
+              </li>
+              <li class="links__container">
+                <span class="links__bg"></span
+                ><a href="#" class="links text-decoration-none text-capitalize"
+                  >career</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav class="col-5 navbar__num2">
+            <ul class="list-unstyled d-flex">
+              <li class="w-50 text-white text-decoration-none email__address">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-envelope-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+                  />
+                </svg>
+                mail@domain.com
+              </li>
+              <li class="w-50 text-white text-decoration-none phone__number">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-telephone-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                  />
+                </svg>
+                +000 000 0000
+              </li>
+            </ul>
+          </nav>
+        </div>
         <div
           class="row row-cols-2 justify-content-between align-items-center navigation__bar"
         >
-          <!-- <div id="logo" class="user-select-none text-uppercase d-flex align-items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
-                    </svg>
-                    consult
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAccordion" aria-controls="navbarAccordion" aria-expanded="true">
-                    <div class="burger__layers"></div>
-                    <div class="burger__layers"></div>
-                    <div class="burger__layers"></div>
-                    hello there
-                </button>
-                <nav class="collapse navbar-collapse" id="navbarAccordion">
-                    <u>
-                        <li>home</li>
-                        <li>about</li>
-                        <li>service</li>
-                        <li class="dropdown-center">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                pages
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" class="dropdown-item">blog grid</a></li>
-                                <li><a href="#" class="dropdown-item">blog detail</a></li>
-                                <li><a href="#" class="dropdown-item">features</a></li>
-                                <li><a href="#" class="dropdown-item">quote form</a></li>
-                                <li><a href="#" class="dropdown-item">the team</a></li>
-                                <li><a href="#" class="dropdown-item">testimonial</a></li>
-                            </ul>
-                        </li>
-                        <li>contact</li>
-                    </u>
-                </nav> -->
-
+          <div
+            id="logo"
+            class="user-select-none text-uppercase d-flex align-items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-emoji-smile"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              />
+              <path
+                d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"
+              />
+            </svg>
+            consult
+          </div>
           <button
-            class="btn"
+            class="navbar-toggler"
+            type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarAccordion"
-            aria-expanded="true"
             aria-controls="navbarAccordion"
+            aria-expanded="true"
           >
-            goh goh
+            <div class="burger__layers"></div>
+            <div class="burger__layers"></div>
+            <div class="burger__layers"></div>
+            hello there
           </button>
-          <nav class="collapse" id="navbarAccordion">
-            <div class="card card-body">
-              Some placeholder content for the collapse component. This panel is
-              hidden by default but revealed when the user activates the
-              relevant trigger.
-            </div>
+          <nav class="collapse navbar-collapse" id="navbarAccordion">
+            <u>
+              <li>home</li>
+              <li>about</li>
+              <li>service</li>
+              <li class="dropdown-center">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  pages
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" class="dropdown-item">blog grid</a></li>
+                  <li><a href="#" class="dropdown-item">blog detail</a></li>
+                  <li><a href="#" class="dropdown-item">features</a></li>
+                  <li><a href="#" class="dropdown-item">quote form</a></li>
+                  <li><a href="#" class="dropdown-item">the team</a></li>
+                  <li><a href="#" class="dropdown-item">testimonial</a></li>
+                </ul>
+              </li>
+              <li>contact</li>
+            </u>
           </nav>
         </div>
       </header>
     </div>
     <script src="./gsap/dist/gsap.min.js"></script>
     <script src="./js/gsap.js"></script>
-    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -1,7 +1,3 @@
-.navbar__num1, .navbar__num2{
-    padding: 1rem 2rem;
-}
-
 .navbar__num1{
     background-color: #F6F6F6;
     padding: 0 2rem;
@@ -12,7 +8,7 @@
             font-family: "Source Sans Pro";
         }
         li{
-            padding: 1rem .6rem;
+            padding: .6rem;
             min-width: 80px;
             text-align: center;
         }
@@ -24,4 +20,44 @@
 
 .navbar__num2{
     @include red-base(background-color);
+    padding: .6rem 3rem;
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        font-family: "Source Sans Pro";
+        text-align: center;
+        position: relative;
+        svg{
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            translate: 0 -2px;
+        }
+    }
+    .phone__number::before{
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 200%;
+        background: #ffffff;
+        bottom: -42%;
+        left: 9px;
+    }
+}
+
+.navigation__bar{
+    padding: 1rem 1.5rem;
+    background: #ffffff;
+    #logo{
+        @include red-base("color");
+        font-weight: 600;
+        svg{
+            min-width: 2rem;
+            height: 2rem;
+            margin-right: .5rem;
+        }
+        font-size: 2rem;
+    }
 }

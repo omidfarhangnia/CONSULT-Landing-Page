@@ -83,12 +83,13 @@
             </ul>
           </nav>
         </div>
-        <div
-          class="row row-cols-2 justify-content-between align-items-center navigation__bar"
+        <nav
+          class="navbar navbar-expand-md d-flex justify-content-between navigation__bar"
         >
-          <div
+          <a
             id="logo"
-            class="user-select-none text-uppercase d-flex align-items-center"
+            class="user-select-none text-uppercase d-flex align-items-center text-decoration-none"
+            href="#"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +107,7 @@
               />
             </svg>
             consult
-          </div>
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -115,38 +116,39 @@
             aria-controls="navbarAccordion"
             aria-expanded="true"
           >
-            <div class="burger__layers"></div>
-            <div class="burger__layers"></div>
-            <div class="burger__layers"></div>
-            hello there
+            <div class="burger__menu d-flex flex-column rounded-2 align-items-center justify-content-center">
+              <div class="burger__layers"></div>
+              <div class="burger__layers"></div>
+              <div class="burger__layers"></div>
+            </div>
           </button>
-          <nav class="collapse navbar-collapse" id="navbarAccordion">
-            <u>
-              <li>home</li>
-              <li>about</li>
-              <li>service</li>
+          <div class="navbar-collapse collapse justify-content-md-end" id="navbarAccordion">
+            <ul class="d-flex flex-column flex-md-row align-items-md-center">
+              <li><a href="#" class="text-uppercase text-decoration-none active__link">home</a></li>
+              <li><a href="#" class="text-uppercase text-decoration-none">about</a></li>
+              <li><a href="" class="text-uppercase text-decoration-none">service</a></li>
               <li class="dropdown-center">
                 <button
-                  class="btn dropdown-toggle"
+                  class="btn dropdown-toggle text-uppercase"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  pages
+                  pages 
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a href="#" class="dropdown-item">blog grid</a></li>
-                  <li><a href="#" class="dropdown-item">blog detail</a></li>
-                  <li><a href="#" class="dropdown-item">features</a></li>
-                  <li><a href="#" class="dropdown-item">quote form</a></li>
-                  <li><a href="#" class="dropdown-item">the team</a></li>
-                  <li><a href="#" class="dropdown-item">testimonial</a></li>
+                  <li><a href="#" class="dropdown-item text-decoration-none text-capitalize">blog grid</a></li>
+                  <li><a href="#" class="dropdown-item text-decoration-none text-capitalize">blog detail</a></li>
+                  <li><a href="#" class="dropdown-item text-decoration-none text-capitalize">features</a></li>
+                  <li><a href="#" class="dropdown-item text-decoration-none text-capitalize">quote form</a></li>
+                  <li><a href="#" class="dropdown-item text-decoration-none text-capitalize">the team</a></li>
+                  <li><a href="#" class="dropdown-item text-decoration-none text-capitalize">testimonial</a></li>
                 </ul>
               </li>
-              <li>contact</li>
-            </u>
-          </nav>
-        </div>
+              <li><a href="#" class="text-uppercase text-decoration-none">contact</a></li>
+            </ul>
+          </div>
+        </nav>
       </header>
     </div>
     <script src="./gsap/dist/gsap.min.js"></script>

@@ -1,3 +1,7 @@
+.container-fluid{
+    --bs-gutter-x: 0;
+}
+
 .navbar__num1{
     background-color: #F6F6F6;
     padding: 0 2rem;
@@ -50,6 +54,9 @@
 .navigation__bar{
     padding: 1rem 1.5rem;
     background: #ffffff;
+    @include breakpoints-up("md"){
+        padding: 2rem;
+    }
     #logo{
         @include red-base("color");
         font-weight: 600;
@@ -57,7 +64,88 @@
             min-width: 2rem;
             height: 2rem;
             margin-right: .5rem;
+            translate: 3px -2.5px;
         }
         font-size: 2rem;
+        @include breakpoints-up("lg"){
+            font-size: 2.5rem;
+            svg{
+                min-width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+    .navbar-toggler{
+        padding: 0;
+        border: 0;
+        --bs-navbar-toggler-focus-width: 0;
+    }
+    #navbarAccordion{
+        margin-top: 1.5rem;
+        @include breakpoints-up("md"){
+            margin-top: 0;
+        }
+        ul{
+            list-style-type: none;
+            li{
+                a, button{
+                    margin: 0.5rem 1.5rem;
+                    font-size: 1.3rem;
+                    font-family: "Kanit";
+                    max-width: 90%;
+                    display: inline-block;
+                    color: #000000;
+                    transition: .5s;
+                    @include breakpoints-up('md'){
+                        margin: 0 .6rem;
+                        font-size: 1.2rem;
+                    }
+                    @include breakpoints-up("lg"){
+                        margin: 0 1.2rem;
+                    }
+                    &:hover{
+                        @include red-base("color");
+                    }
+                }
+            }
+            .active__link{
+                @include red-base("color")
+            }
+        }
+        .dropdown-menu{
+            width: 100%;
+            border: none;
+            background: #eeeeee;
+            border-radius: 0;
+            position: static;
+            @include breakpoints-up('md'){
+                position: absolute;
+            }
+            a{
+                font-size: 1rem;
+                margin: .5rem 0;
+            }
+            li{
+                margin-left: .8rem;
+                --bs-dropdown-link-active-bg: transparent;
+                --bs-dropdown-link-hover-bg: transparent;
+            }
+        }
+        button{
+            --bs-btn-padding-x: 0;
+            --bs-btn-padding-y: 0;
+            --bs-btn-border-width: 0;
+        }
+    }
+}
+
+.burger__menu{
+    width: 3rem;
+    height: 3rem;
+    gap: 10%;
+    .burger__layers{
+        width: 80%;
+        height: 10%;
+        @include red-base("background-color")
     }
 }

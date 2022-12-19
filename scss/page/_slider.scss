@@ -1,0 +1,90 @@
+#page__slider{
+    .carousel-item{
+        height: 60vh;
+        max-height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #000000;
+        gap: 1rem;
+        h3, h1, button{
+            @include font-oswald;
+        }
+        h3{
+            font-size: 1rem;
+        }
+        h1{
+            font-size: 2.5rem;
+            max-width: 70%;
+            text-align: center;
+        }
+        button{
+            font-size: 1.2rem;
+            padding: .5rem 1.3rem;
+        }
+        @include breakpoints-up("md"){
+            height: 80vh;
+            min-height: 600px;
+            h3{
+                font-size: 2rem;
+            }
+            h1{
+                font-size: 3.5rem;
+                max-width: 80%;
+            }
+            button{
+                font-size: 2rem;
+                padding: 1rem 2rem;
+            }
+        }
+        @include breakpoints-up("lg"){
+            min-height: 80vh;
+        }
+
+    }
+    .slide-1{
+        background-image: url(../images/carousel--slide--1-min.jpeg);
+        background-blend-mode: hard-light;
+        background-position: 50%;
+    }
+    .slide-2{
+        background-image: url(../images/carousel--slide--2-min.png);
+        background-blend-mode: hard-light;
+        background-position: 60%;
+    }
+}
+
+.get__quote__btn{
+    color: #ffffff;
+    transition: .5s;
+    @include red-base("background");
+    @include breakpoints-up("md"){
+        margin-right: 2rem;
+    }
+}
+
+.get__quote__btn:hover{
+    @include red-base("color");
+}
+
+.contact__us__btn{
+    color: #000000;
+    background: #ffffff;
+    transition: .5s;
+}
+
+.contact__us__btn:hover{
+    background: #000000;
+    color: #ffffff;
+}
+
+
+button[class *= "carousel-control"]{
+    svg{
+        width: 1rem;
+        height: 1rem;
+        scale: 2;
+        @include breakpoints-up("lg"){
+            scale: 3;
+        }
+    }
+}

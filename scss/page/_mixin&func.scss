@@ -8,6 +8,18 @@
     #{$property}: #F3525A;
 }
 
+@mixin font-source-sans-pro{
+    font-family: "Source Sans Pro", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@mixin font-kanit{
+    font-family: "Kanit", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@mixin font-oswald{
+    font-family: "Oswald", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 // mixins for having media query
 
 $breakpoints-up: ("sm": "576px", "md": "768px", "lg": "992px", "xl": "1200px", "xxl": "1400px");

@@ -76,6 +76,29 @@ const linkAnimation = {
     }
 }
 
+// slider animation part
+gsap.registerEffect({
+    name: "sliderAnime",
+    effect: (target) => {
+        return gsap.fromTo(target, {
+            y: -50,
+            opacity: 0,
+            scale: .5
+        },{
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 1.5,
+            ease: "elastic.out(1, 0.3)",
+        })
+    },
+    extendTimeline: true
+})
+let sliderTl = gsap.timeline();
+sliderTl
+.sliderAnime(".carousel-item h3")
+.sliderAnime(".carousel-item h1", "-=.5")
+.sliderAnime(".carousel-item div", "-=1")
 
 // welcome animation part
 let welcomeTl = gsap.timeline({
@@ -83,7 +106,6 @@ let welcomeTl = gsap.timeline({
         trigger: ".welcome",
         start: "0% 100%",
         toggleActions: "restart complete complete reverse",
-        markers: true
     }
 });
 
@@ -99,7 +121,7 @@ welcomeTl
     stagger: .2,
     duration: 1
 }, "showFirst+=.5")
-.fromTo(".icon__container", {
+.fromTo(".welcome--tomatoSection .icon__container", {
     x: -30,
     opacity: 0,
 },
@@ -110,7 +132,7 @@ welcomeTl
     stagger: .2,
     duration: 1
 }, "showFirst+=.5")
-.fromTo(".text__container", {
+.fromTo(".welcome--tomatoSection .text__container", {
     y: 30,
     opacity: 0,
 },
@@ -121,3 +143,35 @@ welcomeTl
     stagger: .2,
     duration: 1
 }, "showFirst+=1")
+
+// whatWeOffer animation part
+gsap.set(".whatWeOffer--card--container .card", {opacity: 0, y: -100})
+ScrollTrigger.matchMedia({
+    "(min-width: 1113px)": function() {
+        ScrollTrigger.batch(".whatWeOffer--card--container .card", {
+            interval: .5,
+            onEnter: batch => gsap.to(batch, {opacity: 1, stagger: {each: .2, grid: [1, 3]}, y: 0}),
+            onLeave: batch => gsap.set(batch, {opacity: 0, y: -100}),
+            onEnterBack: batch => gsap.to(batch, {opacity: 1, stagger: {each: .2, grid: [1, 3]}, y: 0}),
+            onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 100}),
+        })
+    },
+    "(min-width: 768px)": function() {
+        ScrollTrigger.batch(".whatWeOffer--card--container .card", {
+            interval: .5,
+            onEnter: batch => gsap.to(batch, {opacity: 1, stagger: {each: .2, grid: [3, 2]}, y: 0}),
+            onLeave: batch => gsap.set(batch, {opacity: 0, y: -100}),
+            onEnterBack: batch => gsap.to(batch, {opacity: 1, stagger: {each: .2, grid: [3, 2]}, y: 0}),
+            onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 100}),
+        })
+    },
+    "(max-width: 767px)": function() {
+        ScrollTrigger.batch(".whatWeOffer--card--container .card", {
+            interval: .5,
+            onEnter: batch => gsap.to(batch, {opacity: 1, stagger: {each: .2, grid: [6, 1]}, y: 0}),
+            onLeave: batch => gsap.set(batch, {opacity: 0, y: -100}),
+            onEnterBack: batch => gsap.to(batch, {opacity: 1, stagger: {each: .2, grid: [6, 1]}, y: 0}),
+            onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 100}),
+        })
+    },
+});

@@ -3091,6 +3091,19 @@ progress {
   color: #000;
 }
 
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .align-baseline {
   vertical-align: baseline !important;
 }
@@ -7196,12 +7209,14 @@ progress {
     min-height: 80vh;
   }
 }
-#page__slider .slide-1 {
+
+.slide-1 {
   background-image: url(../images/carousel--slide--1-min.jpeg);
   background-blend-mode: hard-light;
   background-position: 50%;
 }
-#page__slider .slide-2 {
+
+.slide-2 {
   background-image: url(../images/carousel--slide--2-min.png);
   background-blend-mode: hard-light;
   background-position: 60%;
@@ -7231,17 +7246,6 @@ progress {
 .contact__us__btn:hover {
   background: #000000;
   color: #ffffff;
-}
-
-button[class*=carousel-control] svg {
-  width: 1rem;
-  height: 1rem;
-  scale: 2;
-}
-@media (min-width: 992px) {
-  button[class*=carousel-control] svg {
-    scale: 3;
-  }
 }
 
 .links__container {

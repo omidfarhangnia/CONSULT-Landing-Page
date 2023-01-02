@@ -41,16 +41,17 @@
         }
 
     }
-    .slide-1{
-        background-image: url(../images/carousel--slide--1-min.jpeg);
-        background-blend-mode: hard-light;
-        background-position: 50%;
-    }
-    .slide-2{
-        background-image: url(../images/carousel--slide--2-min.png);
-        background-blend-mode: hard-light;
-        background-position: 60%;
-    }
+}
+
+.slide-1{
+    background-image: url(../images/carousel--slide--1-min.jpeg);
+    background-blend-mode: hard-light;
+    background-position: 50%;
+}
+.slide-2{
+    background-image: url(../images/carousel--slide--2-min.png);
+    background-blend-mode: hard-light;
+    background-position: 60%;
 }
 
 .get__quote__btn{
@@ -75,16 +76,4 @@
 .contact__us__btn:hover{
     background: #000000;
     color: #ffffff;
-}
-
-
-button[class *= "carousel-control"]{
-    svg{
-        width: 1rem;
-        height: 1rem;
-        scale: 2;
-        @include breakpoints-up("lg"){
-            scale: 3;
-        }
-    }
 }

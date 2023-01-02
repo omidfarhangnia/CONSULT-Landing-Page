@@ -1,0 +1,36 @@
+.welcome--whiteSection{
+    h2{
+        font-size: calc(1.5rem + 1vw);
+        line-height: 1.2;
+        font-weight: 700;
+        @include font-barlow();
+    }
+
+    p[class *= "text-tomato"]{
+        font-size: 1.25rem;
+        font-weight: 600;
+        @include breakpoints-up("lg"){
+            font-size: 1.6rem;
+            font-weight: 900;
+        }
+    }
+
+    p{
+        font-size: 1rem;
+        @include font-barlow();
+    }
+}
+
+.welcome--tomatoSection{
+    .icon__container{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .text__container{
+        width: calc(95% - 60px);
+        p{
+            text-align: justify;
+        }
+    }
+}

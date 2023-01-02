@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 // link animations
 
 const ALL__LINKS__CONTAINER = document.querySelectorAll(".links__container");
@@ -73,3 +75,49 @@ const linkAnimation = {
         }, "+=.5")
     }
 }
+
+
+// welcome animation part
+let welcomeTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".welcome",
+        start: "0% 100%",
+        toggleActions: "restart complete complete reverse",
+        markers: true
+    }
+});
+
+welcomeTl
+.fromTo(".welcome--whiteSection > *", {
+    y: 30,
+    opacity: 0,
+},
+{
+    y: 0,
+    opacity: 1,
+    ease: "elastic.out(1, 0.3)",
+    stagger: .2,
+    duration: 1
+}, "showFirst+=.5")
+.fromTo(".icon__container", {
+    x: -30,
+    opacity: 0,
+},
+{
+    x: 0,
+    opacity: 1,
+    ease: "elastic.out(1, 0.3)",
+    stagger: .2,
+    duration: 1
+}, "showFirst+=.5")
+.fromTo(".text__container", {
+    y: 30,
+    opacity: 0,
+},
+{
+    y: 0,
+    opacity: 1,
+    ease: "elastic.out(1, 0.3)",
+    stagger: .2,
+    duration: 1
+}, "showFirst+=1")

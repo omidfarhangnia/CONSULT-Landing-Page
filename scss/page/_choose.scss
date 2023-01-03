@@ -1,0 +1,35 @@
+.whyChooseUs{
+    h2{
+        @include headersStyle();
+    }
+}
+
+.whyChooseUs__data__container{
+    div[class *= "reason__container"]{
+        width: 28%;
+        > div{
+            margin-bottom: 30px;
+        }
+        .icon__container{
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+        h4{
+            font-weight: 800;
+            @include font-barlow();
+            color: #152440;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            text-align: justify;
+        }
+        p{
+            line-height: 1.5;
+            @include font-open-sans();
+        }
+    }
+    .image__container{
+        width: 32%;
+        background: green;
+    }
+}

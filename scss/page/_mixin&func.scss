@@ -46,3 +46,12 @@ $breakpoints-down: ("sm": "575px", "md": "767px", "lg": "991px", "xl": "1199px",
         @content;
     }
 }
+
+// headers style
+@mixin headersStyle() {
+    font-size: calc(20px + 3vw);
+    color: #152440;
+    border-bottom: 1px solid #f3525a;
+    font-weight: 700;
+    @include font-open-sans();
+}

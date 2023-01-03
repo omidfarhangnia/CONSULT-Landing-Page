@@ -7716,7 +7716,10 @@ ul {
 
 .whatWeOffer > h4, .whatWeOffer > .h4 {
   font-size: calc(20px + 3vw);
+  color: #152440;
   border-bottom: 1px solid #f3525a;
+  font-weight: 700;
+  font-family: "Open Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .whatWeOffer--card--container {
@@ -7724,8 +7727,10 @@ ul {
 }
 .whatWeOffer--card--container .card {
   background: #F6F6F6;
-  padding: 50px 50px;
+  padding: 70px 50px;
   width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .whatWeOffer--card--container .card {
@@ -7736,6 +7741,26 @@ ul {
   .whatWeOffer--card--container .card {
     width: 30%;
   }
+}
+.whatWeOffer--card--container .card > * {
+  transition: 0.8s ease-in-out;
+}
+.whatWeOffer--card--container .card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background: #ffffff;
+  bottom: -50px;
+  border-radius: 100% 100% 0 0;
+  transition: 0.5s ease-in-out;
+}
+.whatWeOffer--card--container .card:hover > * {
+  translate: 0 -30px;
+}
+.whatWeOffer--card--container .card:hover::after {
+  bottom: 0;
+  box-shadow: 0 -10px 5px #eee;
 }
 .whatWeOffer--card--container .icon__container {
   width: 80px;
@@ -7752,4 +7777,40 @@ ul {
   text-align: justify;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 100;
+}
+
+.whyChooseUs h2, .whyChooseUs .h2 {
+  font-size: calc(20px + 3vw);
+  color: #152440;
+  border-bottom: 1px solid #f3525a;
+  font-weight: 700;
+  font-family: "Open Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.whyChooseUs__data__container div[class*=reason__container] {
+  width: 28%;
+}
+.whyChooseUs__data__container div[class*=reason__container] > div {
+  margin-bottom: 30px;
+}
+.whyChooseUs__data__container div[class*=reason__container] .icon__container {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+.whyChooseUs__data__container div[class*=reason__container] h4, .whyChooseUs__data__container div[class*=reason__container] .h4 {
+  font-weight: 800;
+  font-family: "Barlow", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #152440;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.whyChooseUs__data__container div[class*=reason__container] p {
+  line-height: 1.5;
+  font-family: "Open Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.whyChooseUs__data__container .image__container {
+  width: 32%;
+  background: green;
 }

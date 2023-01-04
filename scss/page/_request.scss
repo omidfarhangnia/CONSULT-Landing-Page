@@ -1,0 +1,51 @@
+.requestAFreeQuote{
+    background: #F6F6F6;
+    form{
+        button{
+            color: #ffffff;
+            font-size: 1.3rem;
+            @include font-barlow();
+        }
+        label{
+            @include font-barlow();
+        }
+    }
+}
+.form__image{
+    min-height: 300px;
+    position: absolute;
+    width: 100%;
+    background-image: url("/images/requestAFreeQuote--image.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    @include breakpoints-up("lg"){
+        height: 400px;
+    }
+}
+.form__image::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(357, 87%, 64%, 0.432);
+}
+
+.form__container{
+    h2{
+        font-size: calc(1.5rem + 2vw);
+        @include font-barlow();
+        font-weight: 900;
+    }
+    p{
+        font-size: .9rem;
+        text-align: justify;
+        @include breakpoints-up("lg"){
+            font-size: 1.1rem;
+        }
+    }
+}

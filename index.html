@@ -190,7 +190,7 @@
               </button>
             </div>
           </section>
-          <section class="row welcome">
+          <section class="d-none row welcome">
               <div class="col-12 col-lg-6 py-6 px-5 welcome--whiteSection">
                 <h2 class="text-capitalize">welcome to <span class="text-uppercase text-tomato">consult</span></h2>
                 <p class="text-capitalize text-tomato my-4">Diam dolor diam ipsum sit. Clita erat ipsum et lorem stet no lorem sit clita duo justo magna dolore</p>
@@ -227,7 +227,7 @@
                 </div>
               </div>
           </section>
-          <section class="row whatWeOffer d-flex flex-column align-items-center py-6 px-5">
+          <section class="d-none row whatWeOffer d-flex flex-column align-items-center py-6 px-5">
             <h4 class="mb-5 w-auto">What We Offer</h4>
             <div class="whatWeOffer--card--container d-flex flex-wrap justify-content-around">
               <div class="card d-flex flex-column align-items-center gap-3">
@@ -274,25 +274,25 @@
               </div>
             </div>
           </section>
-          <section class="row-cols-1 whyChooseUs d-flex flex-column align-items-center py-6 px-5">
+          <section class="d-none row-cols-1 whyChooseUs d-flex flex-column align-items-center py-6 px-5">
             <h2 class="text-capitalize w-auto mb-6">Why Choose Us!!!</h2>
-            <div class="whyChooseUs__data__container d-flex justify-content-between">
+            <div class="whyChooseUs__data__container d-flex flex-wrap justify-content-between">
                 <div class="reason__container--1">
-                  <div>
+                  <div class="reasons">
                     <div class="icon__container rounded-circle bg-tomato d-flex justify-content-center align-items-center">
                       <i class="fa fa-cubes fs-4 text-white"></i>
                     </div>
                     <h4 class="text-capitalize">Best In Industry</h4>
                     <p class="text-capitalize text-black-50">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
                   </div>
-                  <div>
+                  <div class="reasons">
                     <div class="icon__container rounded-circle bg-tomato d-flex justify-content-center align-items-center">
                       <i class="fa fa-percent fs-4 text-white"></i>
                     </div>
                     <h4 class="text-capitalize">99% Success Rate</h4>
                     <p class="text-capitalize text-black-50">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
                   </div>
-                  <div>
+                  <div class="reasons">
                     <div class="icon__container rounded-circle bg-tomato d-flex justify-content-center align-items-center">
                       <i class="fa fa-award fs-4 text-white"></i>
                     </div>
@@ -301,26 +301,28 @@
                   </div>
                 </div>
                 <div class="image__container">
-                  <img src="" alt="">
-                  <p>Clita nonumy sanctus nonumy et clita tempor, et sea amet ut et sadipscing rebum amet takimata amet, sed accusam eos eos dolores dolore et. Et ea ea dolor rebum invidunt clita eos. Sea accusam stet stet ipsum, sit ipsum et ipsum kasd</p>
-                  <button class="btn text-capitalize border-0">learn more</button>
+                  <img src="./images/whyChooseUs image.jpg" alt="">
+                  <div class="text__container bg-tomato p-4 text-white text-center">
+                    <p>Clita nonumy sanctus nonumy et clita tempor, et sea amet ut et sadipscing rebum amet takimata amet, sed accusam eos eos dolores dolore et. Et ea ea dolor rebum invidunt clita eos. Sea accusam stet stet ipsum, sit ipsum et ipsum kasd</p>
+                    <button class="btn text-capitalize border-0 rounded-pill mt-3 py-3 px-4">learn more</button>
+                  </div>
                 </div>
                 <div class="reason__container--2">
-                  <div>
+                  <div class="reasons">
                     <div class="icon__container rounded-circle bg-tomato d-flex justify-content-center align-items-center">
                       <i class="far fa-smile-beam fs-4 text-white"></i>
                     </div>
                     <h4 class="text-capitalize">100% Happy Client</h4>
                     <p class="text-capitalize text-black-50">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
                   </div>
-                  <div>
+                  <div class="reasons">
                     <div class="icon__container rounded-circle bg-tomato d-flex justify-content-center align-items-center">
                       <i class="fa fa-user-tie fs-4 text-white"></i>
                     </div>
                     <h4 class="text-capitalize">Professional Advisors</h4>
                     <p class="text-capitalize text-black-50">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
                   </div>
-                  <div>
+                  <div class="reasons">
                     <div class="icon__container rounded-circle bg-tomato d-flex justify-content-center align-items-center">
                       <i class="fa fa-headset fs-4 text-white"></i>
                     </div>
@@ -329,6 +331,40 @@
                   </div>
                 </div>
             </div>
+          </section>
+          <section class="row-cols-1 requestAFreeQuote">
+            <div class="form__container py-6 px-5 px-lg-6">
+              <h2 class="text-capitalize text-black mb-4">request a free quote</h2>
+              <p class="text-capitalize text-black-50 mb-4">
+                Kasd vero erat ea amet justo no stet, et elitr no dolore no elitr sea kasd et dolor diam tempor. Nonumy sed dolore no eirmod sit nonumy vero lorem amet stet diam at. Ea at lorem sed et, lorem et rebum ut eirmod gubergren, dolor ea duo diam justo dolor diam ipsum dolore stet stet elitr ut. Ipsum amet labore lorem lorem diam magna sea, eos sed dolore elitr.
+              </p>
+              <form class="row justify-content-center justify-content-lg-between needs-validation" action="#" novalidate>
+                <div class="col-10 col-lg-5 my-1 form-floating">
+                  <input type="text" class="form-control" id="nameInput" placeholder="Name" required>
+                  <label for="nameInput" class="text-capitalize">full name</label>
+                  <div class="valid-feedback">correct !</div>
+                  <div class="invalid-feedback">please enter a full name</div>
+                </div>
+                <div class="col-10 col-lg-5 my-1 form-floating">
+                  <input type="text" class="form-control" id="emailInput" placeholder="name@email.com" required>
+                  <label for="emailInput" class="text-capitalize">email address</label>
+                  <div class="valid-feedback">lets go!</div>
+                  <div class="invalid-feedback">please check your email</div>
+                </div>
+                <div class="col-10 col-lg-5 my-1 form-floating">
+                  <select class="form-select text-capitalize" id="selectService" aria-label="select label" required>
+                    <option class="text-capitalize" value="1" selected>financial consultancy</option>
+                    <option class="text-capitalize" value="2">strategy consultancy</option>
+                    <option class="text-capitalize" value="3">tax consultancy</option>
+                  </select>
+                  <label for="selectService">select a service</label>
+                </div>
+                <div class="col mt-4 text-center text-lg-end">
+                  <button class="btn text-capitalize bg-tomato py-3 px-4 rounded-pill" type="button">request a quote</button>
+                </div>
+              </form>
+            </div>
+            <div class="form__image"></div>
           </section>
       </main>
     </div>

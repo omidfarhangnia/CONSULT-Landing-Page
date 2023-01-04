@@ -5,8 +5,9 @@
 }
 
 .whyChooseUs__data__container{
+    gap: 30px;
     div[class *= "reason__container"]{
-        width: 28%;
+        width: 100%;
         > div{
             margin-bottom: 30px;
         }
@@ -20,16 +21,65 @@
             @include font-barlow();
             color: #152440;
             margin-bottom: 10px;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             text-align: justify;
         }
         p{
             line-height: 1.5;
+            font-size: .8rem;
             @include font-open-sans();
+        }
+        @media (min-width: 1000px) {
+            h4{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 1rem;
+            }
         }
     }
     .image__container{
-        width: 32%;
-        background: green;
+        width: 100%;
+        max-width: 500px;
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+        .text__container{
+            p{
+                line-height: 1.6;
+                @include font-open-sans();
+                font-size: .8rem;
+                @media (min-width: 900px) {
+                    font-size: 1rem;
+                }
+            }
+            button{
+                color: #152440;
+                background: #ffffff;
+                @include font-barlow();
+                font-weight: 900;
+                font-size: .9rem;
+                transition: .5s;
+                @media (min-width: 900px) {
+                    font-size: 1.2rem;
+                }
+                &:hover{
+                    background: #152440;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    @media (min-width: 900px) {
+        .image__container{
+            width: 32%;
+        }  
+        div[class *= "reason__container"]{
+            width: 28%;
+        }
+    }
+    @media (max-width: 900px) {
+        justify-content: center !important;
     }
 }

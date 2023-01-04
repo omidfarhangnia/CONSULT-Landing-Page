@@ -175,3 +175,30 @@ ScrollTrigger.matchMedia({
         })
     },
 });
+
+// why choose us animation part
+const REASONS = gsap.utils.toArray(".reasons");
+ScrollTrigger.matchMedia({
+    "(max-width: 899px)": function() {
+        gsap.set(REASONS, {y: 0, opacity: 1})
+    },
+    "(min-width: 900px)": function() {
+        gsap.fromTo(REASONS, 
+        {
+            y: -50,
+            opacity: 0
+        },{
+            y: 0,
+            opacity: 1,
+            stagger: .4,
+            duration: .2,
+            scrollTrigger: {
+                trigger: ".whyChooseUs",
+                end: "+=1000",
+                pin: true,
+                scrub: 2,
+                start: "60% 50%"
+            }
+        });
+    }
+})

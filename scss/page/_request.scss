@@ -49,3 +49,7 @@
         }
     }
 }
+
+.toast-body{
+    @include font-barlow();
+}

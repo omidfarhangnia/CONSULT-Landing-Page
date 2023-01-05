@@ -340,32 +340,42 @@
               </p>
               <form class="row justify-content-center justify-content-lg-between needs-validation" action="#" novalidate>
                 <div class="col-10 col-lg-5 my-1 form-floating">
-                  <input type="text" class="form-control" id="nameInput" placeholder="Name" required>
+                  <input type="text" class="form-control" spellcheck="false" id="nameInput" placeholder="Name" required>
                   <label for="nameInput" class="text-capitalize">full name</label>
-                  <div class="valid-feedback">correct !</div>
-                  <div class="invalid-feedback">please enter a full name</div>
+                  <div class="invalid-feedback">please enter your full name correctly</div>
                 </div>
                 <div class="col-10 col-lg-5 my-1 form-floating">
-                  <input type="text" class="form-control" id="emailInput" placeholder="name@email.com" required>
+                  <input type="text" class="form-control" spellcheck="false" id="emailInput" placeholder="name@email.com" required>
                   <label for="emailInput" class="text-capitalize">email address</label>
-                  <div class="valid-feedback">lets go!</div>
                   <div class="invalid-feedback">please check your email</div>
                 </div>
                 <div class="col-10 col-lg-5 my-1 form-floating">
                   <select class="form-select text-capitalize" id="selectService" aria-label="select label" required>
-                    <option class="text-capitalize" value="1" selected>financial consultancy</option>
-                    <option class="text-capitalize" value="2">strategy consultancy</option>
-                    <option class="text-capitalize" value="3">tax consultancy</option>
+                    <option class="text-capitalize" value="0" selected>financial consultancy</option>
+                    <option class="text-capitalize" value="1">strategy consultancy</option>
+                    <option class="text-capitalize" value="2">tax consultancy</option>
                   </select>
                   <label for="selectService">select a service</label>
                 </div>
                 <div class="col-10 col-lg-5 mt-4 text-center text-lg-end">
-                  <button class="btn text-capitalize bg-tomato py-3 px-4 rounded-pill" type="button">request a quote</button>
+                  <button class="btn text-capitalize bg-tomato py-3 px-4 rounded-pill" id="submitBtn" type="button">request a quote</button>
                 </div>
               </form>
             </div>
             <div class="form__image"></div>
           </section>
+          <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="success__message" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <strong class="me-auto toast__heading text-tomato">PAGE</strong>
+                <small class="toast__time">current time</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body bg-tomato-50 text-white text-capitalize">
+                your request send successfully
+              </div>
+            </div>
+          </div>
       </main>
     </div>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script> -->
@@ -373,5 +383,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/gsap__script.js"></script>
+    <script src="./js/validation__check.js"></script>
   </body>
 </html>

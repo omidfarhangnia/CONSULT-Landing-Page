@@ -194,11 +194,85 @@ ScrollTrigger.matchMedia({
             duration: .2,
             scrollTrigger: {
                 trigger: ".whyChooseUs",
-                end: "+=1000",
+                end: "+=1500",
                 pin: true,
-                scrub: 2,
+                scrub: true,
                 start: "60% 50%"
             }
         });
     }
 })
+
+// our team members animation part
+
+let MEMBERS = gsap.utils.toArray(".members"), membersTl;
+
+MEMBERS.forEach((element) => {
+    element.addEventListener("mousemove", () => {
+        if(membersTl && membersTl.isActive()) return;
+        playMembersAnime(element)
+    })
+    element.addEventListener("mouseleave", () => {
+        membersTl.timeScale(5);
+        membersTl.reverse();
+    })
+})
+
+function playMembersAnime(element) {
+    let MEMBER__DATA = element.querySelector(".member__data");
+    let MEMBER__NAME = element.querySelector(".member__name");
+    let MEMBER__POSITION = element.querySelector(".member__position");
+
+    let nameSteps = MEMBER__NAME.innerHTML.length,
+        jobSteps = MEMBER__POSITION.innerHTML.length;
+
+    membersTl = gsap.timeline({
+    });
+    membersTl
+    .to(element, {
+        backgroundPosition: "50% 25%, center",
+        duration: .5,
+        delay: .5
+    })
+    .to(MEMBER__DATA, {
+        xPercent: -100,
+        duration: 1,
+        ease: "bounce.out"
+    })
+    .fromTo(MEMBER__NAME, {
+        width: 0,
+    }, {
+        width: "160px",
+        ease: `steps(${nameSteps - 1})`,
+        duration: 1.5,
+        onComplete: () => {
+            gsap.getById("nameTypeEffect").pause();
+        }
+    }, "showName")
+    .fromTo(MEMBER__NAME, {
+        borderRight: "1px solid rgba(0, 0, 0)"
+    }, {
+        borderRight: "1px solid rgba(0, 0, 0, 0)",
+        repeat: -1,
+        duration: 1.5 / (nameSteps - 1),
+        id: "nameTypeEffect"
+    }, "showName")
+    .fromTo(MEMBER__POSITION, {
+        width: 0,
+    }, {
+        width: "65px",
+        ease: `steps(${jobSteps - 1})`,
+        duration: 1.5,
+        onComplete: () => {
+            gsap.getById("jobTypeEffect").pause();
+        }
+    }, "showJob+=1.5")
+    .fromTo(MEMBER__POSITION, {
+        borderRight: "1px solid rgba(0, 0, 0)"
+    }, {
+        borderRight: "1px solid rgba(0, 0, 0, 0)",
+        repeat: -1,
+        duration: 1.5 / (jobSteps - 1),
+        id: "jobTypeEffect"
+    }, "showJob+=1.5");
+}

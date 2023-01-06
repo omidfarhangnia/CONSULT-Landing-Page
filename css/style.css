@@ -9274,8 +9274,8 @@ ul {
 }
 
 .form__image {
-  min-height: 300px;
-  position: absolute;
+  height: 300px;
+  position: relative;
   width: 100%;
   background-image: url("/images/requestAFreeQuote--image.jpg");
   background-attachment: fixed;
@@ -9317,4 +9317,73 @@ ul {
 
 .toast-body {
   font-family: "Barlow", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.ourTeamMembers h2, .ourTeamMembers .h2 {
+  font-size: calc(20px + 3vw);
+  color: #152440;
+  border-bottom: 1px solid #f3525a;
+  font-weight: 700;
+  font-family: "Open Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.members__container {
+  gap: 30px;
+}
+
+.member__num__1 {
+  background-image: url("../images/username__image.png"), linear-gradient(120deg, #11998e, #38ef7d);
+}
+
+.member__num__2 {
+  background-image: url("../images/username__image.png"), linear-gradient(120deg, #ff9966, #ff5e62);
+}
+
+.member__num__3 {
+  background-image: url("../images/username__image.png"), linear-gradient(120deg, #F3904F, #3B4371);
+}
+
+.members {
+  width: 100%;
+  max-width: 300px;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: 50%, 100%;
+  background-position: center;
+  transition: 0.2s cubic-bezier(0.38, 0.67, 0, 0.78);
+  position: relative;
+  overflow: hidden;
+}
+
+.member__data {
+  position: absolute;
+  bottom: 20%;
+  background: #ffffff;
+  width: 100%;
+  left: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.member__name {
+  font-size: 1.5rem;
+  color: #f3525a;
+  width: 160px;
+  font-weight: 700;
+  font-family: "Kanit", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.member__position {
+  font-size: 0.9rem;
+  width: 65px;
+  color: #152440;
+  font-family: "Oswald", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
 }

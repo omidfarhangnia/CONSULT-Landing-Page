@@ -1,0 +1,66 @@
+.ourTeamMembers{
+    h2{
+        @include headersStyle();
+    }
+}
+
+.members__container{
+    gap: 30px;
+}
+
+.member__num__1{
+    background-image: url("../images/username__image.png"), linear-gradient(120deg, #11998e, #38ef7d);
+}
+
+.member__num__2{
+    background-image: url("../images/username__image.png"), linear-gradient(120deg, #ff9966, #ff5e62);
+}
+
+.member__num__3{
+    background-image: url("../images/username__image.png"), linear-gradient(120deg, #F3904F, #3B4371);
+}
+
+.members{
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: 50%, 100%;
+    background-position: center;
+    transition: .2s cubic-bezier(.38,.67,0,.78);
+    position: relative;
+    overflow: hidden;
+}
+
+.member__data{
+    position: absolute;
+    bottom: 20%;
+    background: #ffffff;
+    width: 100%;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.member__name{
+    font-size: 1.5rem;
+    color: #f3525a;
+    width: 160px;
+    font-weight: 700;
+    @include font-kanit();
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.member__position{
+    font-size: .9rem;
+    width: 65px;
+    color: #152440;
+    @include font-oswald();
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}

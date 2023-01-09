@@ -4,20 +4,23 @@
         "date": ["1", "1", "2055"],
         "label": "web design",
         "speaker": "admin",
-        "title": "magna sea dolor ipsum amet lorem eos"
+        "title": "magna sea dolor ipsum amet lorem eos",
+        "title__link": "#"
     },
     {
         "img__url": "./images/blog-image/blog-num-2.jpg",
         "date": ["1", "1", "2055"],
         "label": "web design",
-        "speacker": "admin",
-        "title": "magna sea dolor ipsum amet lorem eos"
+        "speaker": "admin",
+        "title": "magna sea dolor ipsum amet lorem eos",
+        "title__link": "#"
     },
     {
         "img__url": "./images/blog-image/blog-num-3.jpg",
         "date": ["1", "1", "2055"],
         "label": "web design",
-        "speacker": "admin",
-        "title": "magna sea dolor ipsum amet lorem eos"
+        "speaker": "admin",
+        "title": "magna sea dolor ipsum amet lorem eos",
+        "title__link": "#"
     }
 ]

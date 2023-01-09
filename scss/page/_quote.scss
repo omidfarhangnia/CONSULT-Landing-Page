@@ -1,0 +1,85 @@
+#whatSayOurClient__slider{
+    background: #F6F6F6;
+    @include breakpoints-up("lg"){
+        width: 50%;
+    }
+    .btn__container{
+        position: relative;
+        width: 100%;
+        width: 100px;
+        height: 60px;
+        button{
+            width: 45px;
+            height: 45px;
+            padding: 12px;
+        }
+    }
+    
+    .carousel-control-next, .carousel-control-prev{  
+        opacity: 1;
+    }
+    
+    .carousel-control-next-icon{  
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>');  
+    }
+    
+    .carousel-control-prev-icon{  
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>');  
+    }
+    
+    .whatSay__header{
+        @include headersStyle();
+        border: none;
+    }
+    
+    .client__num__1{
+        background-image: url("/images/username__image.png"), linear-gradient(146deg, rgba(205,11,87,1) 0%, rgba(0,151,255,1) 100%);
+    }
+    
+    .client__num__2{
+        background-image: url("/images/username__image.png"), linear-gradient(146deg, rgba(205,11,87,1) 0%, rgba(173,255,0,1) 100%);
+    }
+
+    .client__image{
+        width: 90px;
+        height: 90px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .client__name{
+        @include font-barlow();
+        color: #152440;
+        font-weight: 900;
+        font-size: 1.6rem;
+        letter-spacing: -2px;
+    }
+    .client__prof{
+        @include font-open-sans();
+        font-weight: 100;
+    }
+    .client__prof, .client__name{
+        transition: .5s;
+        &:hover{
+            translate: 10px 0;
+        }
+    }
+}
+
+.quotation{
+    font-size: 1.3rem;
+    @include font-open-sans();
+    text-align: justify;
+    .fa-quote-left{
+        padding-right: 10px;
+        font-size: 1.5rem;
+    }
+}
+
+.quote__section__image{
+    @include breakpoints-up("lg"){
+        width: 50%;
+        object-fit: cover;
+    }
+}

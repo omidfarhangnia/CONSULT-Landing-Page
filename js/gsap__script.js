@@ -96,9 +96,9 @@ gsap.registerEffect({
 })
 let sliderTl = gsap.timeline();
 sliderTl
-.sliderAnime(".carousel-item h3")
-.sliderAnime(".carousel-item h1", "-=.5")
-.sliderAnime(".carousel-item div", "-=1")
+.sliderAnime(".header__slider h3")
+.sliderAnime(".header__slider h1", "-=.5")
+.sliderAnime(".header__slider div", "-=1")
 
 // welcome animation part
 let welcomeTl = gsap.timeline({
@@ -190,13 +190,13 @@ ScrollTrigger.matchMedia({
         },{
             y: 0,
             opacity: 1,
-            stagger: .4,
+            stagger: 1.5,
             duration: .2,
             scrollTrigger: {
                 trigger: ".whyChooseUs",
                 end: "+=1500",
                 pin: true,
-                scrub: true,
+                scrub: 3,
                 start: "60% 50%"
             }
         });
@@ -208,12 +208,12 @@ ScrollTrigger.matchMedia({
 let MEMBERS = gsap.utils.toArray(".members"), membersTl;
 
 MEMBERS.forEach((element) => {
-    element.addEventListener("mousemove", () => {
+    element.addEventListener("click", () => {
         if(membersTl && membersTl.isActive()) return;
         playMembersAnime(element)
     })
     element.addEventListener("mouseleave", () => {
-        membersTl.timeScale(5);
+        membersTl.timeScale(3);
         membersTl.reverse();
     })
 })

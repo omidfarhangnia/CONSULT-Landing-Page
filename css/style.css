@@ -8826,6 +8826,10 @@ ul {
   --bs-gutter-x: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ::selection {
   background: transparent;
   color: #000000;
@@ -9353,6 +9357,7 @@ ul {
   transition: 0.2s cubic-bezier(0.38, 0.67, 0, 0.78);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .member__data {
@@ -9386,4 +9391,88 @@ ul {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
+}
+
+#whatSayOurClient__slider {
+  background: #F6F6F6;
+}
+@media (min-width: 992px) {
+  #whatSayOurClient__slider {
+    width: 50%;
+  }
+}
+#whatSayOurClient__slider .btn__container {
+  position: relative;
+  width: 100%;
+  width: 100px;
+  height: 60px;
+}
+#whatSayOurClient__slider .btn__container button {
+  width: 45px;
+  height: 45px;
+  padding: 12px;
+}
+#whatSayOurClient__slider .carousel-control-next, #whatSayOurClient__slider .carousel-control-prev {
+  opacity: 1;
+}
+#whatSayOurClient__slider .carousel-control-next-icon {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>');
+}
+#whatSayOurClient__slider .carousel-control-prev-icon {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>');
+}
+#whatSayOurClient__slider .whatSay__header {
+  font-size: calc(20px + 3vw);
+  color: #152440;
+  border-bottom: 1px solid #f3525a;
+  font-weight: 700;
+  font-family: "Open Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: none;
+}
+#whatSayOurClient__slider .client__num__1 {
+  background-image: url("/images/username__image.png"), linear-gradient(146deg, rgb(205, 11, 87) 0%, rgb(0, 151, 255) 100%);
+}
+#whatSayOurClient__slider .client__num__2 {
+  background-image: url("/images/username__image.png"), linear-gradient(146deg, rgb(205, 11, 87) 0%, rgb(173, 255, 0) 100%);
+}
+#whatSayOurClient__slider .client__image {
+  width: 90px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#whatSayOurClient__slider .client__name {
+  font-family: "Barlow", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #152440;
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: -2px;
+}
+#whatSayOurClient__slider .client__prof {
+  font-family: "Open Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+}
+#whatSayOurClient__slider .client__prof, #whatSayOurClient__slider .client__name {
+  transition: 0.5s;
+}
+#whatSayOurClient__slider .client__prof:hover, #whatSayOurClient__slider .client__name:hover {
+  translate: 10px 0;
+}
+
+.quotation {
+  font-size: 1.3rem;
+  font-family: "Open Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: justify;
+}
+.quotation .fa-quote-left {
+  padding-right: 10px;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .quote__section__image {
+    width: 50%;
+    object-fit: cover;
+  }
 }

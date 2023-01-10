@@ -9524,3 +9524,39 @@ body {
 .blog__speaker, .blog__label {
   color: #6B6A75;
 }
+
+.footer__form h2, .footer__form .h2 {
+  font-size: calc(20px + 3vw);
+  color: #152440;
+  border-bottom: 1px solid #f3525a;
+  font-weight: 700;
+  font-family: "Open Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#signInForm {
+  width: 60% !important;
+}
+#signInForm input {
+  border: none;
+}
+#signInForm input[type=email] {
+  width: 80%;
+  border-radius: 10px 0 0 10px;
+  font-size: 1rem;
+}
+@media (min-width: 992px) {
+  #signInForm input[type=email] {
+    font-size: 1.4rem;
+  }
+}
+#signInForm input[type=submit] {
+  width: 150px;
+  font-family: "Barlow", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  border-radius: 0 10px 10px 0;
+}
+@media (min-width: 992px) {
+  #signInForm input[type=submit] {
+    font-size: 1.4rem;
+  }
+}

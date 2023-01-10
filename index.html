@@ -152,8 +152,8 @@
           </div>
         </nav>
       </header>
-      <main class="container-fluid">
-          <section class="row d-none">
+      <main class="container-fluid d-none">
+          <section class="row">
             <div id="page__slider" class="carousel slide carousel-fade" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item header__slider active slide-1 d-flex flex-column align-items-center justify-content-center" data-bs-interval="5000">
@@ -191,7 +191,7 @@
               </button>
             </div>
           </section>
-          <section class="row d-none welcome">
+          <section class="row welcome">
               <div class="col-12 col-lg-6 py-6 px-5 welcome--whiteSection">
                 <h2 class="text-capitalize">welcome to <span class="text-uppercase text-tomato">consult</span></h2>
                 <p class="text-capitalize text-tomato my-4">Diam dolor diam ipsum sit. Clita erat ipsum et lorem stet no lorem sit clita duo justo magna dolore</p>
@@ -228,7 +228,7 @@
                 </div>
               </div>
           </section>
-          <section class="row d-none whatWeOffer d-flex flex-column align-items-center py-6 px-5">
+          <section class="row whatWeOffer d-flex flex-column align-items-center py-6 px-5">
             <h4 class="mb-5 w-auto">What We Offer</h4>
             <div class="whatWeOffer--card--container d-flex flex-wrap justify-content-around">
               <div class="card d-flex flex-column align-items-center gap-3">
@@ -275,7 +275,7 @@
               </div>
             </div>
           </section>
-          <section class="d-none row-cols-1 whyChooseUs d-flex flex-column align-items-center py-6 px-5">
+          <section class="row-cols-1 whyChooseUs d-flex flex-column align-items-center py-6 px-5">
             <h2 class="text-capitalize w-auto mb-6">Why Choose Us!!!</h2>
             <div class="whyChooseUs__data__container d-flex flex-wrap justify-content-between">
                 <div class="reason__container--1">
@@ -333,7 +333,7 @@
                 </div>
             </div>
           </section>
-          <section class="d-none row-cols-1 requestAFreeQuote">
+          <section class="row-cols-1 requestAFreeQuote">
             <div class="form__container py-6 px-5 px-lg-6">
               <h2 class="text-capitalize text-black mb-4">request a free quote</h2>
               <p class="text-capitalize text-black-50 mb-4">
@@ -377,7 +377,7 @@
               </div>
             </div>
           </div>
-          <section class="d-none row-cols-1 ourTeamMembers d-flex flex-column align-items-center py-6 px-5">
+          <section class="row-cols-1 ourTeamMembers d-flex flex-column align-items-center py-6 px-5">
             <h2 class="text-capitalize w-auto mb-6">our team members</h2>
             <div class="members__container d-flex flex-row flex-wrap justify-content-center justify-content-lg-around">
               <div class="members member__num__1">
@@ -400,7 +400,7 @@
               </div>
             </div>
           </section>
-          <section class="d-none row-cols-1 whatSayOurClient d-lg-flex align-items-stretch mb-6">
+          <section class="row-cols-1 whatSayOurClient d-lg-flex align-items-stretch mb-6">
             <img src="./images/quote--section--image.jpg" class="quote__section__image d-inline-block" alt="">
             <div id="whatSayOurClient__slider" class="carousel slide py-6 px-5 py-lg-5" data-bs-ride="carousel">
               <h3 class="text-capitalize whatSay__header mb-5">what say our client!!!</h3>
@@ -438,11 +438,20 @@
               </div>
             </div>
           </section>
-          <section class="d-none row-cols-1 latestBlogPost d-flex flex-column align-items-center py-6 px-5">
+          <section class="row-cols-1 latestBlogPost d-flex flex-column align-items-center py-6 px-5">
             <h2 class="text-capitalize w-auto mb-6">latest blog post</h2>
             <div class="blogs__container d-flex flex-column flex-lg-row align-items-center justify-content-around gap-5"></div>
           </section>
       </main>
+      <footer class="container-fluid">
+        <section class="row-cols-1 footer__form py-6 d-flex flex-column align-items-center bg-tomato">
+          <h2 class="text-capitalize w-auto mb-4 mb-lg-5">stay update!!!</h2>
+          <form action="#" id="signInForm" class="w-auto d-flex">
+            <input type="email" class="form-control py-lg-3 px-lg-4" required placeholder="Your Email">
+            <input type="submit" class="form-control py-lg-3 px-lg-4 bg-black text-white text-capitalize" value="sign up">
+          </form>
+        </section>
+      </footer>
     </div>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script> -->
     <script src="./node_modules/gsap/dist/gsap.min.js"></script>

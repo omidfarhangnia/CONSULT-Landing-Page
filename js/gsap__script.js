@@ -196,7 +196,7 @@ ScrollTrigger.matchMedia({
                 trigger: ".whyChooseUs",
                 end: "+=1500",
                 pin: true,
-                scrub: 3,
+                scrub: 1.4,
                 start: "60% 50%"
             }
         });

@@ -30,3 +30,39 @@
         }
     }
 }
+
+
+.footer{
+    h3{
+        font-weight: 600;
+        font-size: calc(1.3rem + .6vw);
+        @include font-barlow();
+        line-height: 1.2;
+    }
+
+    .link__groups{
+        width: 90%;
+        margin-bottom: 30px;
+        @include breakpoints-up("md"){
+            width: 40%;
+        }
+        @include breakpoints-up("lg"){
+            width: 22%;
+            margin-bottom: 0;
+        }
+    }
+
+    .followUs{
+        > div{
+            gap: 10px;
+        }
+        a{
+            display: inline-block;
+            width: 46px;
+            height: 46px;
+            font-size: 1.4rem;
+            display: grid;
+            place-items: center;
+        }
+    }
+}

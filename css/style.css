@@ -8886,6 +8886,12 @@ body {
 .navigation__bar {
   padding: 1rem 1.5rem;
   background: #ffffff;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 2;
+  border-bottom: 2px solid #f3525a;
+  border-top: 2px solid #f3525a;
 }
 @media (min-width: 768px) {
   .navigation__bar {

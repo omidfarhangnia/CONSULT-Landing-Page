@@ -288,3 +288,28 @@ function playMembersAnime(element) {
         id: "jobTypeEffect"
     }, "showJob+=1.5");
 }
+
+let footerTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".footer",
+    }
+});
+
+footerTl
+.fromTo(".link__groups li", {
+    opacity: 0,
+    x: -30,
+}, {
+    opacity: 1,
+    x: 0,
+    stagger: .1,
+    delay: .5,
+})
+.fromTo(".followUs a", {
+    opacity: 0,
+    x: -30,
+}, {
+    opacity: 1,
+    x: 0,
+    stagger: .2,
+})

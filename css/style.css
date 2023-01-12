@@ -9534,7 +9534,12 @@ body {
 }
 
 #signInForm {
-  width: 60% !important;
+  width: 80% !important;
+}
+@media (min-width: 500px) {
+  #signInForm {
+    width: 60% !important;
+  }
 }
 #signInForm input {
   border: none;

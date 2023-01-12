@@ -20,6 +20,18 @@ ALL__LINKS__CONTAINER.forEach((element, index) => {
     })
 })
 
+gsap.fromTo(".navigation__bar", {
+    padding: "1.5rem 2rem",
+}, {
+    padding: "0 2rem",
+    duration: .6,
+    ease: "power4.in",
+    scrollTrigger: {
+        trigger: "#page__slider",
+        start: "15% 10%",
+        toggleActions: "play play play reverse"
+    }
+});
 
 const linkAnimation = {
     kill: (linkBg, linkText) => {
@@ -185,10 +197,10 @@ ScrollTrigger.matchMedia({
     "(min-width: 900px)": function() {
         gsap.fromTo(REASONS, 
         {
-            y: -50,
+            y: -40,
             opacity: 0
         },{
-            y: 0,
+            y: 10,
             opacity: 1,
             stagger: 1.5,
             duration: .2,

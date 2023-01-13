@@ -1,5 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// loader animation
 window.addEventListener("load", () => {
     gsap.to(".page__loader", {
         yPercent: -100,
@@ -8,15 +9,38 @@ window.addEventListener("load", () => {
         delay: .5,
         onStart: () => {
             document.querySelector(".project__container").classList.remove("d-none");
-        },
-        onComplete: () => {
-            gsap.to("body", {overflowY: "scroll"})
         }
     })
 })
 
-// link animations
+// burger menu animation
+const BURGER__MENU = document.querySelector('.burger__menu');
+BURGER__MENU.addEventListener("click", () => {
+    if(burgerTl.paused() || burgerTl.reversed()){
+        burgerTl.restart()
+    }else{
+        burgerTl.reverse();
+    }
+})
+let burgerTl = gsap.timeline({paused: true});
+burgerTl
+.to(".burger__layer__2", {
+    scale: 0,
+    duration: .2,
+    ease: "linear"
+})
+.to(".burger__layer__1", {
+    rotate: "45deg",
+    duration: .3,
+    y: 9.5,
+}, "burgerLabel")
+.to(".burger__layer__3", {
+    rotate: "-45deg",
+    duration: .3,
+    y: -9.5,
+}, "burgerLabel")
 
+// link animations
 const ALL__LINKS__CONTAINER = document.querySelectorAll(".links__container");
 const ALL__LINKS__BG = document.querySelectorAll(".links__bg");
 const ALL__LINKS = document.querySelectorAll(".links");

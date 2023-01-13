@@ -55,7 +55,6 @@
     background: white;
     z-index: 2;
     border: {
-        bottom: 2px solid #f3525a;
         top: 2px solid #f3525a;
     };
     @include breakpoints-up("md"){

@@ -84,10 +84,15 @@ ul{
 
 body{
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 ::selection{
     background: transparent;
     color: #000000;
     font-weight: bold;
+}
+
+::-webkit-scrollbar{
+    width: 0;
 }

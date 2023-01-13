@@ -1,5 +1,20 @@
 gsap.registerPlugin(ScrollTrigger);
 
+window.addEventListener("load", () => {
+    gsap.to(".page__loader", {
+        yPercent: -100,
+        duration: 2,
+        ease: "bounce",
+        delay: .5,
+        onStart: () => {
+            document.querySelector(".project__container").classList.remove("d-none");
+        },
+        onComplete: () => {
+            gsap.to("body", {overflowY: "scroll"})
+        }
+    })
+})
+
 // link animations
 
 const ALL__LINKS__CONTAINER = document.querySelectorAll(".links__container");
@@ -29,7 +44,7 @@ gsap.fromTo(".navigation__bar", {
     scrollTrigger: {
         trigger: "#page__slider",
         start: "15% 10%",
-        toggleActions: "play play play reverse"
+        toggleActions: "restart play play reverse"
     }
 });
 
@@ -108,7 +123,7 @@ gsap.registerEffect({
 })
 let sliderTl = gsap.timeline();
 sliderTl
-.sliderAnime(".header__slider h3")
+.sliderAnime(".header__slider h3", "+=2")
 .sliderAnime(".header__slider h1", "-=.5")
 .sliderAnime(".header__slider div", "-=1")
 

@@ -1,0 +1,9 @@
+.page__loader{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #152440, #f3525a);
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

@@ -8828,12 +8828,17 @@ ul {
 
 body {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 ::selection {
   background: transparent;
   color: #000000;
   font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
 
 .navbar__num1 {
@@ -8890,7 +8895,6 @@ body {
   top: 0;
   background: white;
   z-index: 2;
-  border-bottom: 2px solid #f3525a;
   border-top: 2px solid #f3525a;
 }
 @media (min-width: 768px) {
@@ -9603,4 +9607,14 @@ body {
   font-size: 1.4rem;
   display: grid;
   place-items: center;
+}
+
+.page__loader {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #152440, #f3525a);
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
 }

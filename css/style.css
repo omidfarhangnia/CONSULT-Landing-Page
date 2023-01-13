@@ -9299,7 +9299,7 @@ body {
   height: 300px;
   position: relative;
   width: 100%;
-  background-image: url("/images/requestAFreeQuote--image.jpg");
+  background-image: url("../images/requestAFreeQuote--image.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -9448,10 +9448,10 @@ body {
   border: none;
 }
 #whatSayOurClient__slider .client__num__1 {
-  background-image: url("/images/username__image.png"), linear-gradient(146deg, rgb(205, 11, 87) 0%, rgb(0, 151, 255) 100%);
+  background-image: url("../images/username__image.png"), linear-gradient(146deg, rgb(205, 11, 87) 0%, rgb(0, 151, 255) 100%);
 }
 #whatSayOurClient__slider .client__num__2 {
-  background-image: url("/images/username__image.png"), linear-gradient(146deg, rgb(205, 11, 87) 0%, rgb(173, 255, 0) 100%);
+  background-image: url("../images/username__image.png"), linear-gradient(146deg, rgb(205, 11, 87) 0%, rgb(173, 255, 0) 100%);
 }
 #whatSayOurClient__slider .client__image {
   width: 90px;
